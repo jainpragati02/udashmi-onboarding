@@ -1,0 +1,93 @@
+
+
+Hello Pragati,
+
+Welcome aboard!🎉To help you get started, here’s a 5-day ramp-up plan covering SQL (basic → advanced) and API automation testing.
+The first 3 days are mandatory for building strong fundamentals. Days 4 and 5 are optional but highly recommended for advanced API automation skills.
+
+
+Day 1 – SQL Basics & API Testing Fundamentals
+Objective: Understand database basics, write simple queries, and test APIs manually.
+
+Morning (SQL Basics – 3 hrs)
+Topics: Introduction to SQL, SELECT, WHERE, ORDER BY, DISTINCT, LIMIT. - Hands-on: Create Employees table and run simple queries.
+
+Afternoon (SQL Exercises – 2 hrs) Practice on W3Schools TryIt Editor: https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+Exercises:
+1. Select all customers from Germany.
+2. Get names and contact names of customers from Mexico.
+3. List all products with prices greater than 50.
+4. Show the total number of customers in each country.
+5. Find the average price of all products.
+6. List all orders placed by customer “Around the Horn”.
+7. Find the top 5 most expensive products.
+8. Show employees who are from London.
+9. Find the total order amount for each order.
+10. Show customers who have never placed an order.
+
+Evening (API Testing Fundamentals – 3 hrs)
+Topics: REST API, HTTP methods, response codes. - Hands-on: Use Postman with ReqRes API. - Tasks: Send GET, POST requests and validate responses.
+
+Deliverable: SQL scripts + Postman screenshots.
+
+
+Day 2 – SQL Intermediate & API Automation with Postman
+Objective: Learn joins, grouping, subqueries, and API automation.
+
+Morning (SQL Intermediate – 3 hrs)
+Topics: JOINs, GROUP BY, HAVING, subqueries. - Hands-on: Queries on Orders, Customers, Products.
+
+Afternoon (SQL Challenges – 2 hrs)
+Solve 10 intermediate SQL problems.
+
+Evening (API Automation – 3 hrs)
+Postman tests: Assertions on response body & status codes. - Organize APIs in Postman Collection. - Run collection with Newman CLI, export HTML report.
+Deliverable: SQL queries + Postman collection.
+
+
+Day 3 – SQL Advanced & Code-based API Automation
+Objective: Work with advanced SQL queries and create a basic API automation framework.
+Morning (SQL Advanced – 3 hrs)
+Topics: Views, Indexes, Transactions, Constraints, Window Functions. - Hands-on: Advanced queries.
+
+Afternoon (SQL Challenge – 2 hrs)
+Solve advanced SQL problems.
+
+Evening (API Automation Framework – 3 hrs) - Choose:
+Java + RestAssured + TestNG OR Python + Requests/Pytest. - Automate one GET and one POST API. - Run tests from IDE/CLI.
+Deliverable: Advanced SQL scripts + basic API automation framework.
+
+
+Day 4 – Advanced API Automation (Optional) Objective:
+Handle real-world API automation scenarios.
+
+Morning (Auth & Headers – 3 hrs)
+Learn authentication: Basic, Bearer Token, OAuth2. - Hands-on: Automate authenticated API requests.
+
+Afternoon (Data-Driven Testing – 2 hrs)
+Use CSV/JSON files for test input. - Automate multiple test cases with parameterized data.
+
+Evening (Chaining Requests – 3 hrs)
+Capture response values to reuse in subsequent requests.
+
+Deliverable: API automation scripts with auth + data-driven tests.
+
+
+Day 5 – API Automation Best Practices & CI/CD (Optional) Objective: Learn framework structuring, reporting, and CI/CD integration.
+
+Morning (Framework Enhancements – 3 hrs)
+Organize test cases into modules. - Add logging & reporting.
+
+Afternoon (CI/CD Basics – 2 hrs)
+Push project to GitHub. - Setup CI/CD pipeline. - Run API tests automatically on commit.
+
+Evening (Final Review & Best Practices – 3 hrs)
+Review SQL (Day 1–3).
+Review API automation (Day 3–5).
+Discuss best practices for scalable automation.
+Deliverable: CI/CD pipeline with automated API tests + reports.
+
+
+Expected Outcomes - Confident with SQL (basic → advanced) queries. - Test APIs manually using Postman. - Automate APIs using Postman. - Build a code-based API automation framework. - (Optional) Handle auth, data-driven tests, and CI/CD.
+
+Please feel free to reach out to me if you have any questions

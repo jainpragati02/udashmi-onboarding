@@ -1,26 +1,32 @@
 package com.example.apiauto;
 
 import io.restassured.http.ContentType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class CreateUserTest {
 
+    private static final Logger logger = LoggerFactory.getLogger(CreateUserTest.class);
     public static final String BASE_MOCK_URI = "https://68d0db1de6c0cbeb39a2a613.mockapi.io";
     public static final String USERS_PATH = "/users";
     public static String createdUserId; // Static variable to store the created user ID
 
     @Test
     public void createUser_shouldReturn201_andHaveId() {
+        logger.info("Starting test: createUser_shouldReturn201_andHaveId");
         // JSON payload
         Map<String, String> requestBody = new HashMap<>();
         requestBody.put("name", "morpheus");
         requestBody.put("job", "leader");
+        logger.debug("Request body: {}", requestBody);
+
 
         // POST request with logging
         String id = given()
@@ -41,15 +47,18 @@ public class CreateUserTest {
                 .path("id");   // extract generated id
 
         createdUserId = id; // Store the created ID in the static variable
-        System.out.println("Created user id = " + id);
+        logger.info("Created user id = {}", id);
     }
 
     @Test
     public void createUserAndThenRetrieveIt() {
+        logger.info("Starting test: createUserAndThenRetrieveIt");
         // 1. Create a user
         Map<String, String> createRequestBody = new HashMap<>();
         createRequestBody.put("name", "neo");
         createRequestBody.put("job", "the one");
+        logger.debug("Create request body: {}", createRequestBody);
+
 
         String createdId = given()
                 .relaxedHTTPSValidation()
@@ -66,9 +75,10 @@ public class CreateUserTest {
                 .extract()
                 .path("id");
 
-        System.out.println("Created user with ID: " + createdId);
+        logger.info("Created user with ID: {}", createdId);
 
         // 2. Retrieve the created user using the captured ID
+        logger.info("Retrieving user with ID: {}", createdId);
         given()
                 .relaxedHTTPSValidation()
                 .baseUri(BASE_MOCK_URI)
@@ -81,6 +91,6 @@ public class CreateUserTest {
                 .body("name", equalTo("neo"))
                 .body("job", equalTo("the one"));
 
-        System.out.println("Successfully retrieved user with ID: " + createdId);
+        logger.info("Successfully retrieved user with ID: {}", createdId);
     }
 }
